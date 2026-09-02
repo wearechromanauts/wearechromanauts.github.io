@@ -5,22 +5,82 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chromanauts</title>
 <style>
+  @font-face {
+    font-family: 'Fjalla One';
+    src: url('FjallaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #b12e5c; /* fallback color, matches the image's gradient */
   }
-  img {
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #9674b2 0%, #b12e5c 40%, #e8935a 75%, #f7ddbd 100%);
+    font-family: 'Fjalla One', sans-serif;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 24px 60px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .lockup {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
     display: block;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;   /* fills the whole screen, no border showing */
-    object-position: center;
+    margin: 0 auto;
+  }
+
+  h1 {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: clamp(24px, 4vw, 38px);
+    line-height: 1.25;
+    margin: 30px 0 20px;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.5;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: #ffe9b3;
   }
 </style>
 </head>
 <body>
-  <img src="chromanauts-closed-landing.png" alt="Chromanauts - Sorry, our bay doors are currently closed to new clients. If you're already within the Chromanauts orbit, you can still log into your web uploader to send files, and email greetings@wearechromanauts.com with the order details.">
+  <div class="page">
+    <img class="lockup" src="chromanauts-lockup.png" alt="Chromanauts">
+    <h1>SORRY, OUR BAY DOORS ARE<br>CURRENTLY CLOSED TO NEW CLIENTS</h1>
+    <p>
+      If you're already within the Chromanauts orbit, you can still log into your
+      web uploader to send files, and email
+      <a href="mailto:greetings@wearechromanauts.com">greetings@wearechromanauts.com</a>
+      with the order details.
+    </p>
+  </div>
 </body>
 </html>
